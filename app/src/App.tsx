@@ -1,21 +1,50 @@
-import { Card } from "./components/Card";
+import { InputBasic } from "./components/Input/Basic";
+import { InputPill } from "./components/Input/Pill";
 
 function App() {
   return (
-    <div id="app" class="bg-primary-900 h-screen w-screen pt-12">
-      <div class="bg-primary-800 fixed top-0 flex h-12 w-full justify-between self-center p-2 shadow-md">
-        <button class="text-primary-100">Menu</button>
-        <button class="text-primary-100">Settings</button>
+    <>
+      <div class="bg-primary-800 text-primary-500 flex h-10 items-center justify-center">
+        Персонаж
       </div>
+      <div class="mx-auto max-w-screen-2xs px-2 py-4">
+        <InputBasic label="Имя персонажа"></InputBasic>
+        <div class="my-1"></div>
 
-      <div class="grid grid-cols-1 gap-2 p-2 xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 lg:max-w-screen-lg lg:mx-auto">
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
+        <div class="grid grid-cols-2 gap-2">
+          <InputBasic label="Раса"></InputBasic>
+          <InputBasic label="Класс"></InputBasic>
+          <InputBasic label="Уровень"></InputBasic>
+          <InputBasic label="Опыт"></InputBasic>
+        </div>
+
+        <InputBasic label="Оружие"></InputBasic>
+        <div class="my-1"></div>
+
+        <InputBasic label="Оружие"></InputBasic>
+        <div class="my-1"></div>
+
+        <InputBasic label="Оружие"></InputBasic>
+        <div class="my-2"></div>
+
+        <InputPill label="Test"></InputPill>
+        <div class="my-2"></div>
+
+        <InputPill label="Test"></InputPill>
+        <div class="my-2"></div>
+
+        <InputPill label="Test"></InputPill>
+        <div class="my-2"></div>
+
+        <InputPill label="Test"></InputPill>
+        <div class="my-2"></div>
+
+        <InputPill label="Test"></InputPill>
+        <div class="my-2"></div>
+
+        <InputPill label="Test"></InputPill>
       </div>
-    </div>
+    </>
   );
 }
 

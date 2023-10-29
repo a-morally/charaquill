@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  src: url("./assets/fonts/rubik.ttf");
+  font-family: "Rubik";
+}
+
+@font-face {
+  src: url("./assets/fonts/rubik-italic.ttf");
+  font-family: "Rubik";
+  font-style: italic;
+}
+
 :root {
   --primary-50: #f5f8f1;
   --primary-100: #ebf1e3;
@@ -13,4 +24,16 @@
   --primary-700: #5c6f45;
   --primary-800: #3e4a2e;
   --primary-900: #1f2517;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+*:focus-visible {
+  outline: none;
+}
+
+*:focus {
+  outline: none;
 }

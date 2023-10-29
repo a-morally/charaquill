@@ -17,8 +17,12 @@ export default {
           900: "var(--primary-900)",
         },
       },
+      fontFamily: {
+        sans: ["Rubik"],
+      },
       screens: {
-        xs: "375px",
+        "2xs": "320px",
+        xs: "425px",
       },
     },
   },

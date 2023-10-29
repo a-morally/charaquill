@@ -34,6 +34,7 @@
     "tailwind.config.js",
     "postcss.config.js",
     "prettier.config.js",
+    "vite.config.js",
     "src"
   ],
   "references": [{ "path": "./tsconfig.node.json" }]
