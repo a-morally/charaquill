@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  app:
+    container_name: "${PROJECT_NAME}-app"
+    build:
+      context: "app"
+    ports:
+      - "${APP_PORT_EXT}:${APP_PORT_INT}"
+    expose:
+      - ${APP_PORT_EXT}
+    volumes:
+      - "../app:/var/www/app"
+    environment:
+      APP_PORT_EXT: ${APP_PORT_EXT}
+      APP_PORT_INT: ${APP_PORT_INT}
