@@ -21,8 +21,7 @@ export default {
         sans: ["Rubik"],
       },
       screens: {
-        "2xs": "320px",
-        xs: "425px",
+        xs: "360px",
       },
     },
   },

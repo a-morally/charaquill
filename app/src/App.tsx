@@ -1,50 +1,38 @@
 import { InputBasic } from "./components/Input/Basic";
-import { InputPill } from "./components/Input/Pill";
 
 function App() {
   return (
-    <>
-      <div class="bg-primary-800 text-primary-500 flex h-10 items-center justify-center">
+    <div class="bg-primary-800 h-full w-full">
+      <header class="bg-primary-500 text-primary-300 flex h-12 items-center justify-center shadow-sm">
         Персонаж
-      </div>
-      <div class="mx-auto max-w-screen-2xs px-2 py-4">
-        <InputBasic label="Имя персонажа"></InputBasic>
-        <div class="my-1"></div>
+      </header>
 
-        <div class="grid grid-cols-2 gap-2">
-          <InputBasic label="Раса"></InputBasic>
-          <InputBasic label="Класс"></InputBasic>
-          <InputBasic label="Уровень"></InputBasic>
-          <InputBasic label="Опыт"></InputBasic>
+      <main class="max-w-screen-xs mx-auto px-2 py-4">
+        <InputBasic label="Имя"></InputBasic>
+        <div class="h-2" />
+
+        <div class="flex flex-row gap-2">
+          <div class="basis-2/3">
+            <InputBasic label="Раса"></InputBasic>
+          </div>
+          <div class="basis-1/3">
+            <InputBasic label="Уровень"></InputBasic>
+          </div>
+        </div>
+        <div class="h-2" />
+
+        <div class="flex flex-row gap-2">
+          <div class="basis-2/3">
+            <InputBasic label="Класс"></InputBasic>
+          </div>
+          <div class="basis-1/3">
+            <InputBasic label="Опыт"></InputBasic>
+          </div>
         </div>
 
-        <InputBasic label="Оружие"></InputBasic>
-        <div class="my-1"></div>
-
-        <InputBasic label="Оружие"></InputBasic>
-        <div class="my-1"></div>
-
-        <InputBasic label="Оружие"></InputBasic>
-        <div class="my-2"></div>
-
-        <InputPill label="Test"></InputPill>
-        <div class="my-2"></div>
-
-        <InputPill label="Test"></InputPill>
-        <div class="my-2"></div>
-
-        <InputPill label="Test"></InputPill>
-        <div class="my-2"></div>
-
-        <InputPill label="Test"></InputPill>
-        <div class="my-2"></div>
-
-        <InputPill label="Test"></InputPill>
-        <div class="my-2"></div>
-
-        <InputPill label="Test"></InputPill>
-      </div>
-    </>
+        <hr class="bg-primary-700 border-none h-0.5 my-4" />
+      </main>
+    </div>
   );
 }
 

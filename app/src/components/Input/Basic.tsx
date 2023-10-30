@@ -13,15 +13,18 @@ export const InputBasic: Component<P> = (props: P) => {
   const id = UniqueGenerator.generate();
 
   return (
-    <div>
+    <div class="group">
       <Show when={label !== ""}>
-        <label for={id} class="text-primary-500 block w-full cursor-pointer">
+        <label
+          for={id}
+          class="text-primary-300 group-focus-within:text-primary-200 block w-full cursor-pointer overflow-hidden text-ellipsis whitespace-nowrap text-sm transition"
+        >
           {label}
         </label>
       </Show>
       <input
         id={id}
-        class="bg-primary-500 text-primary-900 block w-full rounded-lg px-2 py-1"
+        class="bg-primary-500 text-primary-200 group-focus-within:text-primary-100 group-focus-within:bg-primary-400 block w-full rounded-lg px-2 py-1 transition"
         value={value}
       />
     </div>
