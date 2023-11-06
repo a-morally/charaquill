@@ -33,6 +33,7 @@ export function App(): JSXElement {
     "Скрытность",
     "Убеждение",
     "Уход за животными",
+    "Перенос отвратителен",
   ];
 
   return (
@@ -105,27 +106,16 @@ export function App(): JSXElement {
 
         <Hr />
 
-        <For each={skills}>
-          {(skill) => (
-            <>
-              <div class="flex w-full flex-row gap-2">
-                <div class="w-px basis-2/3">
-                  <Card>
-                    <Title>{skill}</Title>
-                    <Value>12</Value>
-                  </Card>
-                </div>
-                <div class="w-px basis-1/3">
-                  <Card>
-                    <Title>Значение</Title>
-                    <Value>+1</Value>
-                  </Card>
-                </div>
-              </div>
-              <div class="h-2" />
-            </>
-          )}
-        </For>
+        <div class="grid grid-cols-2 gap-2">
+          <For each={skills}>
+            {(skill) => (
+              <Card>
+                <Title>{skill}</Title>
+                <Value>+1</Value>
+              </Card>
+            )}
+          </For>
+        </div>
       </main>
     </div>
   );
