@@ -10,13 +10,4 @@ export default defineConfig({
       { find: "@/", replacement: path.resolve(__dirname, "./src") + "/" },
     ],
   },
-
-  build: {
-    target: "es6",
-    rollupOptions: {
-      input: {
-        main: path.resolve(__dirname, "index.html"),
-      },
-    },
-  },
 });
