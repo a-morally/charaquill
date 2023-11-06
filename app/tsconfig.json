@@ -27,15 +27,19 @@
 
     /* Other */
     "useDefineForClassFields": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+
+    "paths": { "@/*": ["./src/*"] }
   },
+
   "include": [
     ".eslintrc.cjs",
     "tailwind.config.js",
     "postcss.config.js",
     "prettier.config.js",
-    "vite.config.js",
+    "vite.config.ts",
     "src"
   ],
+
   "references": [{ "path": "./tsconfig.node.json" }]
 }
