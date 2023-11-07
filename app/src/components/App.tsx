@@ -3,6 +3,7 @@ import { Hr } from "./View/Hr";
 import { Card } from "./View/Card";
 import { Value } from "./View/Value";
 import { Title } from "./View/Title";
+import { Item } from "./Sheet/Item";
 
 export function App(): JSXElement {
   const attributes = [
@@ -36,11 +37,25 @@ export function App(): JSXElement {
     "Перенос отвратителен",
   ];
 
+  const items = [
+    {
+      type: "card",
+      items: [
+        { type: "title", value: "Ass" },
+        { type: "value", key: "Test" }
+      ],
+    },
+  ];
+
   return (
     <div class="bg-primary-800 relative h-full w-full overflow-y-scroll">
       <header class="bg-primary-600 text-primary-300 flex h-12 items-center justify-center shadow-sm">
         Персонаж
       </header>
+
+      <main class="max-w-screen-xs mx-auto px-2 py-4">
+        <For each={items}>{(item) => <Item {...item} />}</For>
+      </main>
 
       <main class="max-w-screen-xs mx-auto px-2 py-4">
         <Card>
